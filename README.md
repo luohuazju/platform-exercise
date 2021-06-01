@@ -1,5 +1,50 @@
 # Fender Digital Platform Engineering Challenge
 
+##AuthAPI Project
+
+I did some JWT codes before in Python/Java/PHP, so I will choose Python to do it.
+I will use FastAPI to host the HTTP RESTful requests for me. To make it easy and simple, here 
+is what I will implement.
+
+swagger docs --> FastAPI RESTful --> PostgresSQL
+
+## how to run
+If you have docker on your machine and make command on your machine.
+Command to start a simple postgres 
+```shell
+make run-db
+```
+Command to stop the database
+```shell
+make clean-db
+```
+Command to run SQL in database
+```shell
+make enter-db
+```
+
+Once the database is running fine
+Command to prepare the python ENV
+```shell
+make build
+```
+Command to start the FastAPI
+```shell
+make run
+```
+Command to check the log
+```shell
+make log
+```
+Command to stop the FastAPI
+```shell
+make clean
+```
+
+If the AuthAPI and database docker containers are all running fine, visit this swagger pages for testing and demo
+http://localhost:8000/docs#
+
+
 ## Description
 
 Design and implement a RESTful web service to facilitate a user authentication system. The authentication mechanism should be *token based*. Requests and responses should be in **JSON**.
